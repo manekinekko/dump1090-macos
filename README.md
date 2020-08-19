@@ -1,9 +1,7 @@
 # dump1090-macos MacOS package
 
-This is a fork of [dump1090-fa](https://github.com/adsbxchange/dump1090-fa)
-customized for use with MacOS
-
-It is designed to build as a Debian package.
+This is a port of [dump1090-fa](https://github.com/adsbxchange/dump1090-fa)
+customized for MacOS
 
 ## Building under jessie
 
