@@ -27,4 +27,4 @@ librtlsdr.
 
 ## Usage
 
-`./dump1090 [--options]`
+`./dump1090 --help`
