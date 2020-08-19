@@ -16,12 +16,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Install brew deps
+    - name: Install brew dependencies
       run: brew install librtlsdr libbladeRF
 
     - name: Build Release
       run: |
-        make
+        PKG_CONFIG_PATH=/usr/local/bin/pkg-config make
         zip --junk-paths dump1090-macos.zip dump1090 view1090
     
     - name: Get version
