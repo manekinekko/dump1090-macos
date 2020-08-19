@@ -102,7 +102,7 @@ static void show_config()
     int status;
 
     unsigned rate;
-    unsigned freq;
+    unsigned long long freq;
     bladerf_lpf_mode lpf_mode;
     unsigned lpf_bw;
     bladerf_lna_gain lna_gain;
@@ -355,7 +355,7 @@ static void *handle_bladerf_samples(struct bladerf *dev,
         // read the next metadata header
         uint8_t *header = ((uint8_t*)samples) + offset;
         uint64_t metadata_magic = le32toh(*(uint32_t*)(header));
-        uint64_t metadata_timestamp = le64toh(*(uint64_t*)(header + 4));
+        uint64_t metadata_timestamp = le32toh(*(uint64_t*)(header + 4));
         uint32_t metadata_flags = le32toh(*(uint32_t*)(header + 12));
         void *sample_data = header + 16;
 
